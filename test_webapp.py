@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 def test_webapp():
     # Set up Chrome driver
@@ -34,6 +35,9 @@ def test_webapp():
         assert submit_button.get_attribute("type") == "submit", "Submit button not found"
 
         print("All tests passed! College registration form is working correctly.")
+
+        # Keep the browser open for 10 seconds
+        time.sleep(10)
 
     finally:
         driver.quit()
