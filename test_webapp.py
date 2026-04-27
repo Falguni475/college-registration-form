@@ -34,6 +34,14 @@ def test_webapp():
         submit_button = driver.find_element("tag name", "button")
         assert submit_button.get_attribute("type") == "submit", "Submit button not found"
 
+        # Automatically fill the form
+        name_input.send_keys("John Doe")
+        driver.find_element("id", "male").click()
+        driver.find_element("id", "math").click()
+        driver.find_element("id", "science").click()
+
+        print("Form filled automatically: Name=John Doe, Gender=Male, Subjects=Math, Science")
+
         print("All tests passed! College registration form is working correctly.")
 
         # Keep the browser open for 10 seconds
