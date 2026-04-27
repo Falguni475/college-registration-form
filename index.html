@@ -3,25 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Web App</title>
+  <title>College Registration Form</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="container">
     <header>
-      <h1>Welcome to My Simple Web App</h1>
-      <p>A lightweight HTML/CSS demo page.</p>
+      <h1>College Registration Form</h1>
+      <p>Register for your college courses.</p>
     </header>
 
     <section class="card">
-      <h2>Features</h2>
-      <ul>
-        <li>Responsive layout</li>
-        <li>Modern card design</li>
-        <li>Pure HTML and CSS</li>
-      </ul>
-      <a class="button" href="#" aria-label="Learn more">Learn More</a>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Subjects:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="math" name="subjects" value="math">
+            <label for="math">Mathematics</label>
+            <input type="checkbox" id="science" name="subjects" value="science">
+            <label for="science">Science</label>
+            <input type="checkbox" id="english" name="subjects" value="english">
+            <label for="english">English</label>
+            <input type="checkbox" id="history" name="subjects" value="history">
+            <label for="history">History</label>
+          </div>
+        </div>
+
+        <button type="submit" class="button">Register</button>
+      </form>
     </section>
   </main>
 </body>
-</html>
+</html
